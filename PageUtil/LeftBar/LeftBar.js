@@ -1,3 +1,4 @@
 function post(){
-	console.log("?");
+	$("#pgMain").empty();
+	setPageUtil('#pgMain','Page/NewMsg/NewMsg.html');
 }
