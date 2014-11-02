@@ -4,7 +4,8 @@ function init() {
 
 function setUI() {
 	setPageUtil('#pgHeader','PageUtil/Header/Header.html');
-	setPageUtil('#pgLeft','PageUtil/LeftBar/LeftBar.html');
+	setPageUtil('#pgSilder','PageUtil/Silder/Silder.html');
+	setPageUtil('#pgLeft','PageUtil/pgLeft/pgLeft.html');
 	setPageUtil('#pgMain','PageUtil/Index/Index.html');
 	setPageUtil('#pgFooter','PageUtil/Footer/Footer.html');
 }
@@ -14,3 +15,4 @@ function setPageUtil(page_id, page_link) {
 		$(page_id).html(data);
 	});
 }
+

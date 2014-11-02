@@ -1,0 +1,46 @@
+
+#sliderBtFrame{
+	margin-left: 35px;
+	margin-top: 5px;
+}
+.btStyle{
+	float: left;
+	background-color: transparent;
+	width:  18px;
+	height: 18px;
+	padding: 0;
+	border: none;
+	background: none;
+	background-image:url("../../img/circle.png");
+	outline: none;
+	margin-left: 10px;
+}
+.btSelectedStyle{
+	float: left;
+	background-color: transparent;
+	width:  18px;
+	height: 18px;
+	padding: 0;
+	border: none;
+	background: none;
+	background-image:url("../../img/circle_hover.png");
+	outline: none;
+	margin-left: 10px;
+}
+#sliderImg{
+	width: 100%;
+	height: 145px;
+	-webkit-animation-duration:1.6s;
+    -webkit-animation-direction:alternate;        
+    -webkit-animation-play-state:inherit;
+    -webkit-animation-fill-mode:forwards;
+}
+@-webkit-keyframes slide 
+{
+    from {opacity:0.2}
+	to {opacity:1.0}
+}
+.slide_ani 
+{
+    -webkit-animation-name:slide ;                 
+}

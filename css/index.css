@@ -2,26 +2,40 @@
 	margin:0 auto;
 	width: 768px;
 	height:1024px;
+	background-color: #FCFCFC;
+	border-radius: 10px;
 }
 #pgHeader{
-	height:250px;
+	height:140px;
 	width:100%;
-	background-color: #ffffcc;
+}
+#pgSilder{
+	border-top-style:solid;
+	height:178px;
+	border-bottom-style:solid;
+	border-width:1px; 
+	border-color:#9D9D9D;
+	width:100%;
+	background-color: #F0F0F0;
 }
 #pgLeft{
-	width: 200px;
-	height:650px;
-	background-color: orange;
+	height:579px;
+	border-width:1px; 
+	border-color:#9D9D9D;
+	border-bottom-style:solid;
+	width:22%;
 	float: left;
+	background-color: #F0F0F0;
 }
 #pgMain{
-	margin-left: 200px;
-	width: 568px;
-	height:650px;
-	background-color: lightgreen;
+	margin-left: 22%;
+	height:579px;
+	border-width:1px; 
+	border-color:#9D9D9D;
+	border-bottom-style:solid;
+	width:78%;
 }
 #pgFooter{
 	width:100%;
 	height:124px;
-	background-color: #eeeeee;
 }
