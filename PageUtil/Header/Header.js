@@ -1,7 +1,4 @@
 function headerInit(){
-}
-
-function goHome(){
 
 }
 
@@ -23,6 +20,10 @@ function goMember(){
 
 function goLink(){
 
+}
+
+function goBookInformation(){
+	
 }
 
 
