@@ -1,0 +1,34 @@
+#LoginPageView{
+	background-color: transparent;
+	width: 50%;
+	height: 50%;
+	margin-top: 3%;
+	margin-left: 5%;
+}
+#LoginPageHolder{
+	width: 100%;
+	height: 100%;	
+	display:inline-block;
+}
+.LoginBlock{
+	height: 50px;
+	width: 210px;	
+}
+#loginBT{
+	font-size: 16px;
+	width: 60px;
+	height: 30px;
+	float: right;	
+}
+.loginInput{
+	font-size: 16px;
+	width: 150px;
+	height: 30px;	
+}
+.textInput{
+	font-size: 16px;
+	line-height:30px;
+	width: 50px;
+	height: 30px;
+	float: left;	
+}

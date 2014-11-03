@@ -2,6 +2,7 @@ function goInformation(){
 	var items = getHeaderInformation();
 	setSelectedBar(items);
 	headerSetTitlebar(0);
+	setPageUtil('#IndexBox','PageUtil/ListView/ListView.html');
 	listViewInit(res_title_items,res_date_items);
 }
 
@@ -28,6 +29,7 @@ function goMember(){
 	var items = getMember();
 	setSelectedBar(items);
 	headerSetTitlebar(8);
+	setPageUtil('#IndexBox','Page/LoginPage/LoginPage.html');
 }
 
 function goLink(){
