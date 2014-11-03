@@ -23,5 +23,12 @@ function setPageUtil(page_id, page_link) {
 				leftBarInit();
 			}
 		}
+		if (this.url == "PageUtil/ListView/ListView.html"){
+			var res_title_items = ["氫能規劃、厭氧產氫、經濟分析和情報蒐集","協助產業開發先進鍛壓製程與模具設計技術"
+			,"氫能規劃","厭氧產氫","經濟分析","情報蒐集","協助產業","開發先進","鍛壓製程","模具設計","設計技術"];
+			var res_date_items = ["2014-10-12","2014-10-19"
+			,"2014-10-19","2014-10-19","2014-10-19","2014-10-19","2014-10-19","2014-10-19","2014-10-19","2014-10-19","2014-10-19"];
+			listViewInit(res_title_items,res_date_items);
+		}
 	});
 }

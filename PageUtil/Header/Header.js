@@ -1,30 +1,31 @@
 function goInformation(){
-	var items = ["本會簡介","組織架構","聯絡方式","年度計畫"];
+	var items = getHeaderInformation();
 	setSelectedBar(items);
 	headerSetTitlebar(0);
+	listViewInit(res_title_items,res_date_items);
 }
 
 function goNewMsg(){
-	var items = ["學會活動","會訊","優秀論文獎","代發訊息"];
+	var items = getHeaderNewMsg();
 	setSelectedBar(items);
 	headerSetTitlebar(2);
 }
 //可能會call api
 function goActivity(){
-	var items = ["社區活動","研習活動","運動研討會","學術活動"];
+	var items = getHeaderActivity();
 	setSelectedBar(items);
 	headerSetTitlebar(4);
 }
 
 //可能會call api
 function goBookInformation(){
-	var items = ["學報","季刊","雙月刊"];
+	var items = getHeaderBookInformation();
 	setSelectedBar(items);
 	headerSetTitlebar(6);
 }
 
 function goMember(){
-	var items = ["會員登入","會員註冊","忘記密碼"];
+	var items = getMember();
 	setSelectedBar(items);
 	headerSetTitlebar(8);
 }

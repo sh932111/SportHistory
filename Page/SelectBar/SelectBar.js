@@ -1,7 +1,7 @@
 var Items = [];
 
 function selectedBarInit(){
-	var items = ["本會簡介","組織架構","聯絡方式","年度計畫"];
+	var items = getHeaderInformation();
 	setSelectedBar(items);
 }
 //設定SelectedBar的內容與UI
