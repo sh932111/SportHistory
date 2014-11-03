@@ -11,7 +11,6 @@ function leftBarInit(){
 	var sliderImg2 = document.getElementById('NavDetailImg2');
 	var bt_off = "navStyle";
 	var bt_on = "navSelectedStyle";
-	
 	openSlider(slider_rsc ,sliderBtFrame,sliderImg,2500,sliders,slidersBt,bt_off,bt_on);
 	openSlider(slider_rsc2 ,sliderBtFrame2,sliderImg2,2500,sliders2,slidersBt2,bt_off,bt_on);
 }

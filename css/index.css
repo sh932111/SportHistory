@@ -37,11 +37,20 @@
 	border-left-style:solid;
 	border-color:#9D9D9D;
 }
+#TitleBar{
+	margin-left: 22%;
+	width: 597px;
+	height:29px;
+	border-width:1px; 
+	border-color:#9D9D9D;
+	border-right-style:solid;
+	border-left-style:solid;
+	background-color: #F0F0F0;
+}
 #pgMain{
 	margin-left: 22%;
-	height:529px;
+	height:500px;
 	width: 597px;
-	border-width:1px; 
 	border-color:#9D9D9D;
 	border-bottom-style:solid;
 	border-right-style:solid;

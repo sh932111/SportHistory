@@ -9,7 +9,8 @@ function sliderInit(){
 	var bt_on = "btSelectedStyle";
 	openSlider(slider_rsc ,sliderBtFrame,slider_Img,2500,sliders,slidersBt,bt_off,bt_on);
 }
-
+//啟動Slider 函數的值：圖片來源(array),要放button的div,要放圖片的img,時間,
+//放入圖片的array,放入button的array,css style 關閉,css style 打開
 function openSlider(slider_rsc ,sliderBtFrame,sliderImg,time,sliders,slidersBt,bt_off,bt_on){
 	var index = 0;
 	for (var i = 0; i < slider_rsc.length; i++) {
