@@ -1,5 +1,6 @@
 
 function sliderInit(){ 
+
 	var slidersBt = new Array();
 	var sliders = new Array();
 	var slider_rsc = ["img/slider1.jpg","img/slider2.jpg","img/slider3.jpg","img/slider4.jpg","img/slider5.jpg"]
@@ -34,22 +35,31 @@ function change(index,time,sliders,slidersBt,sliderImg,bt_off,bt_on){
 	{
 		index = 0;
 	}
-
 	sliderImg.src = sliders[index].src;
 
-	sliderImg.className = 'slide_ani';
-		
-	sliderImg.addEventListener("webkitAnimationEnd", function (e)
-	{
-		sliderImg.className = '';
-	});
-
+	var check = navigator.userAgent.match("MSIE");
+	if (!check){
+		sliderImg.className = 'slide_ani';
+		PrefixedEvent(sliderImg, "AnimationEnd", listener);
+	}
 	for (var i = 0; i < slidersBt.length; i++) {
 		var bt = slidersBt[i];
 		setBtStatus(bt,index,i,bt_off,bt_on);
 	}
 
 	setTimeout(function(){change(index,time,sliders,slidersBt,sliderImg,bt_off,bt_on)},time);
+}
+
+var pfx = ["webkit", "moz", "MS", "o", ""];
+function PrefixedEvent(element, type, callback) {
+	for (var p = 0; p < pfx.length; p++) {
+    	if (!pfx[p]) type = type.toLowerCase();
+    	element.addEventListener(pfx[p]+type, callback, false);
+	}
+}
+
+function listener(e) {
+	$(this).removeClass('slide_ani');
 }
 
 function setBtStatus(bt,index,i,bt_off,bt_on)

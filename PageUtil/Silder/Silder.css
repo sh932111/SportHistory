@@ -34,13 +34,23 @@
     -webkit-animation-direction:alternate;        
     -webkit-animation-play-state:inherit;
     -webkit-animation-fill-mode:forwards;
+	-moz-animation-duration:1.6s;
+    -moz-animation-direction:alternate;        
+    -moz-animation-play-state:inherit;
+    -moz-animation-fill-mode:forwards;
 }
 @-webkit-keyframes slide 
 {
     from {opacity:0.2}
 	to {opacity:1.0}
 }
+@-moz-keyframes slide 
+{
+    from {opacity:0.2}
+	to {opacity:1.0}
+}
 .slide_ani 
 {
-    -webkit-animation-name:slide ;                 
+    -webkit-animation-name:slide ;   
+    -moz-animation-name:slide ;                 
 }
