@@ -24,6 +24,11 @@
 #SelectBarBox{
 	width: auto;
 	height: 40px;
+	background: #2894FF; /* Old browsers */
+	background: -webkit-linear-gradient(top,  from(#2894FF), to(#0072E3)); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  from(#2894FF), to(#0072E3)); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, from(#2894FF), to(#0072E3)); /* IE10+ */
+	background: linear-gradient(to bottom,  from(#2894FF), to(#0072E3)); /* W3C */
 	background:-webkit-gradient(linear, left top, left bottom, from(#2894FF), to(#0072E3));
 	background:-moz-linear-gradient(top, #2894FF, #0072E3);
 	filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#2894FF', endColorstr='#0072E3');
@@ -45,6 +50,11 @@
 	color: white;
 	width: 90px;
 	height: 40px;
+	background: #0080FF; /* Old browsers */
+	background: -webkit-linear-gradient(top,  from(#0080FF), to(#005AB5)); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  from(#0080FF), to(#005AB5)); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, from(#0080FF), to(#005AB5)); /* IE10+ */
+	background: linear-gradient(to bottom,  from(#0080FF), to(#005AB5)); /* W3C */
 	background:-webkit-gradient(linear, left top, left bottom, from(#0080FF), to(#005AB5));
 	background:-moz-linear-gradient(top, #0080FF, #005AB5);
 	filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F0F0F0', endColorstr='#E0E0E0');
