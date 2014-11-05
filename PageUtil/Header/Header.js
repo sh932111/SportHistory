@@ -3,7 +3,6 @@ function goInformation(){
 	setSelectedBar(items);
 	headerSetTitlebar(0);
 	setPageUtil('#IndexBox','PageUtil/ListView/ListView.html');
-	listViewInit(res_title_items,res_date_items);
 }
 
 function goNewMsg(){
@@ -37,7 +36,7 @@ function goLink(){
 	setSelectedBar(items);
 	var nav_view = document.getElementById('NavView');
 	var nav_array = nav_view.getElementsByTagName("div");
-	setTitleBarTitle2(nav_array[10].innerText);
+	setTitleBarTitle2(nav_array[10].getAttribute('value'));
 }
 
 function headerSetTitlebar(index){
@@ -45,6 +44,7 @@ function headerSetTitlebar(index){
 	var selectbox = document.getElementById('SelectBarBox');
 	var nav_array = nav_view.getElementsByTagName("div");
 	var select_array = selectbox.getElementsByTagName("div");
-	setTitleBarTitle(nav_array[index].innerText,select_array[0].innerText);
+	var nav_item = nav_array[index];
+	setTitleBarTitle(nav_array[index].getAttribute('value'),select_array[0].value);
 }
 
