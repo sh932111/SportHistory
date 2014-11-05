@@ -20,6 +20,7 @@ function listViewInit(res_title_items,res_date_items){
 				date_items.push(dates);
 				titles = [];
 				dates = [];
+				
 			}
 		}
 		setListView(title_items[0],date_items[0]);

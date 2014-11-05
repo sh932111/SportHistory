@@ -13,6 +13,7 @@ function setSelectedBar(items){
 		var item = items[i];
 		var item_div = document.createElement("div");
 		item_div.innerHTML = item;
+		item_div.value = item;
 		item_div.className = "SelectItem";
 		item_div.id = i;
 		item_div.addEventListener("click", function(e){
