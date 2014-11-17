@@ -1,14 +1,14 @@
 function goInformation(){
 	var items = getHeaderInformation();
 	setSelectedBar(items);
-	headerSetTitlebar(0);
+	headerSetTitlebar(2);
 	setPageUtil('#IndexBox','PageUtil/ListView/ListView.html');
 }
 
 function goNewMsg(){
 	var items = getHeaderNewMsg();
 	setSelectedBar(items);
-	headerSetTitlebar(2);
+	headerSetTitlebar(0);
 }
 //可能會call api
 function goActivity(){
@@ -24,19 +24,12 @@ function goBookInformation(){
 	headerSetTitlebar(6);
 }
 
-function goMember(){
-	var items = getMember();
-	setSelectedBar(items);
-	headerSetTitlebar(8);
-	setPageUtil('#IndexBox','Page/LoginPage/LoginPage.html');
-}
-
 function goLink(){
 	var items = [];
 	setSelectedBar(items);
 	var nav_view = document.getElementById('NavView');
 	var nav_array = nav_view.getElementsByTagName("div");
-	setTitleBarTitle2(nav_array[10].getAttribute('value'));
+	setTitleBarTitle2(nav_array[8].getAttribute('value'));
 }
 
 function headerSetTitlebar(index){

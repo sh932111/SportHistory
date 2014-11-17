@@ -1,7 +1,7 @@
 var Items = [];
 
 function selectedBarInit(){
-	var items = getHeaderInformation();
+	var items = getHeaderNewMsg();
 	setSelectedBar(items);
 }
 //設定SelectedBar的內容與UI
