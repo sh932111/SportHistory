@@ -3,6 +3,7 @@
 	width: 90%;
 	height: 85%;
 	margin-left: 7%;
+	background-color: transparent;
 }
 
 #css_table {
@@ -84,6 +85,7 @@
 .ListViewIndexBox{
 	height: 100%;
 	margin: 0px auto;
+	background-color: transparent;
 }
 .ListViewIndexDetail{
 	float: left;
