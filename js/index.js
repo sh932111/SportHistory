@@ -1,4 +1,16 @@
+var reloadData;
+var reloadYear;
+var reloadmonth;
+var InitCheck;
 function init() {
+
+	var dialogView = document.getElementById("dialogView");
+	dialogView.className = "dialogShow";
+	setPageUtilCallBack('#dialogView','Page/leafletDialog/leafletDialog.html',function(){
+		leafletDialogInit();
+	});
+	reloadmonth = getNowMonth()+1;
+	reloadYear = getNowYear();
 	setUI();
 }
 

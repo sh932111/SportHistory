@@ -39,6 +39,7 @@ function setListView(title_items,date_items){
 	for (var i = 0; i < title_items.length; i++) {
 		var box_div = document.createElement("div");
 		box_div.className = "css_tr";
+		box_div.id = i;
 		var title_div = document.createElement("div");
 		title_div.innerHTML = title_items[i];
 		var date_div = document.createElement("div");
@@ -51,6 +52,14 @@ function setListView(title_items,date_items){
 			date_div.className = "date_css_td underLineStyle1";
 			title_div.className = "title_css_td underLineStyle1";
 		}
+		box_div.addEventListener("click", function(e){
+			// var dialogView = document.getElementById("dialogView");
+			// dialogView.className = "dialogShow";
+			// setPageUtilCallBack('#dialogView','Page/ShowDataDialog/ShowDataDialog.html',function(){
+			// 	leafletDialogInit();
+			// 	ShowDataDialogInit();
+			// });
+		});
 		box_div.appendChild(title_div);
 		box_div.appendChild(date_div);
 		css_table.appendChild(box_div);

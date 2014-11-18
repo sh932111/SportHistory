@@ -6,8 +6,8 @@
 #LogoView{
 	width: 100%;
 	height: 276px;
-	position:relative;
-	z-index:2;
+	/*position:relative;*/
+	/*z-index:2;*/
 	border-radius: 10px 10px 0px 0px;/* Old browsers 
 	background: -webkit-linear-gradient(top,  from(#0080FF), to(#005AB5)); /* Chrome10+,Safari5.1+
 	background: -o-linear-gradient(top,  from(#0080FF), to(#005AB5)); /* Opera 11.10+

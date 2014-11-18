@@ -17,7 +17,36 @@ function setSelectedBar(items){
 		item_div.className = "SelectItem";
 		item_div.id = i;
 		item_div.addEventListener("click", function(e){
-        	refreshTitleBar(this.id);
+			if (HeaderTitle == "學會簡介") {
+				if (Items[this.id] == "本會簡介") {
+					InitCheck = 1;
+					TitleBarSelectItemsHidden();
+					setPageUtil('#IndexBox','Page/Information/Information.html');
+				}
+				else if (Items[this.id] == "組織架構") {
+					InitCheck = 1;
+					TitleBarSelectItemsHidden();
+					setPageUtil('#IndexBox','Page/Architecture/Architecture.html');
+				}
+				else if (Items[this.id] == "聯絡方式") {
+					InitCheck = 1;
+					TitleBarSelectItemsHidden();
+					setPageUtil('#IndexBox','Page/CallingPage/CallingPage.html');
+				}
+				else if (Items[this.id] == "年度計畫") {
+					TitleBarSelectItemsShow();
+					Key = "";
+					Api = getAllPlanApi;
+					setPageUtil('#IndexBox','PageUtil/index/index.html');
+				}
+			}
+			else if (HeaderTitle == "出版資訊") {
+				InitCheck = 1;
+				Key = Items[this.id];
+				Api = getAllBookApi;	
+				setPageUtil('#IndexBox','PageUtil/index/index.html');
+			}
+			refreshTitleBar(this.id);
         });
 		box.appendChild(item_div);
         var line_div = document.createElement("div");
@@ -35,10 +64,12 @@ function setSelectedBar(items){
 function refreshTitleBar(index){
 	if (Items.length > 0 ){
 		BarList = Items[index];
+		Key = Items[index];
 		setTitleBarTitle(BarTitle,BarList);
 	}
 	else{
 		BarList = "";
+		Key = "";
 		setTitleBarTitle2(BarTitle);
 	}
 }
