@@ -1,0 +1,24 @@
+.Test1ViewBox {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden; 
+	overflow-y: auto; 
+	white-space: nowrap;
+}
+.Test1Link a {
+
+	width: 30%;
+	margin: 0 auto;
+}
+.Test1Link {
+	width: 100%;
+	height: 10%;
+}
+.Test1View {
+	width: 100%;
+	height: 80%;
+}
+.Test1View img{
+	width: 100%;
+	height: 100%;
+}

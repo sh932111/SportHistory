@@ -46,6 +46,14 @@ function setSelectedBar(items){
 				Api = getAllBookApi;	
 				setPageUtil('#IndexBox','PageUtil/index/index.html');
 			}
+			else if (HeaderTitle == "最新消息") {
+				InitCheck = 1;
+				if (Items[this.id] == "學會活動") {
+					setPageUtil('#IndexBox','TestPage/Test1/Test1.html');
+				}
+				//Key = Items[this.id];
+				//Api = getAllBookApi;	
+			}
 			refreshTitleBar(this.id);
         });
 		box.appendChild(item_div);

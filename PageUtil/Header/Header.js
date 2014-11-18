@@ -17,7 +17,8 @@ function goNewMsg(){
 	var items = getHeaderNewMsg();
 	setSelectedBar(items);
 	headerSetTitlebar(0);
-	setPageUtil('#IndexBox','PageUtil/index/index.html');
+	// setPageUtil('#IndexBox','PageUtil/index/index.html');
+	setPageUtil('#IndexBox','TestPage/Test1/Test1.html');
 }
 //可能會call api
 function goActivity(){
