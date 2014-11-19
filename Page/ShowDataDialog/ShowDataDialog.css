@@ -1,4 +1,23 @@
 .ShowDataDialog {
 	margin: 0 auto;
 	width: 90%;
+	height: 90%;
+}
+#ShowDataDialogLinkView {
+	height: 5%;
+	width: 100%;
+	text-align: center;
+}
+#ShowDataDialogImgView {
+	height: 80%;
+	width: 100%;
+	text-align: center;
+}
+#ShowDataDialogImgView img{
+	height: 95%;
+	width: 100%;
+}
+#ShowDataDialogLocation {
+	height: 15%;
+	width: 100%;
 }

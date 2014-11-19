@@ -53,12 +53,18 @@ function setListView(title_items,date_items){
 			title_div.className = "title_css_td underLineStyle1";
 		}
 		box_div.addEventListener("click", function(e){
-			// var dialogView = document.getElementById("dialogView");
-			// dialogView.className = "dialogShow";
-			// setPageUtilCallBack('#dialogView','Page/ShowDataDialog/ShowDataDialog.html',function(){
-			// 	leafletDialogInit();
-			// 	ShowDataDialogInit();
-			// });
+			var index = this.id;
+			var dialogView = document.getElementById("dialogView");
+			dialogView.className = "dialogShow";
+			if (index == 0) {
+				location.href = 'test/1.pdf';
+			}
+			else {
+				setPageUtilCallBack('#dialogView','Page/ShowDataDialog/ShowDataDialog.html',function(){
+					leafletDialogInit();
+					ShowDataDialogInit(index);
+				});
+			}
 		});
 		box_div.appendChild(title_div);
 		box_div.appendChild(date_div);

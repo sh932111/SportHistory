@@ -1,2 +1,2 @@
-1.直接複製整個內容成為專案
-2.shell script 增加內頁
+reload個頁面後 在去loading元件
+例如：index -> listview (indexInit)
