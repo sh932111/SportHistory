@@ -54,12 +54,13 @@ function setListView(title_items,date_items){
 		}
 		box_div.addEventListener("click", function(e){
 			var index = this.id;
-			var dialogView = document.getElementById("dialogView");
-			dialogView.className = "dialogShow";
 			if (index == 0) {
 				location.href = 'test/1.pdf';
 			}
 			else {
+				var dialogView = document.getElementById("dialogView");
+				dialogView.className = "dialogShow";
+			
 				setPageUtilCallBack('#dialogView','Page/ShowDataDialog/ShowDataDialog.html',function(){
 					leafletDialogInit();
 					ShowDataDialogInit(index);
