@@ -3,7 +3,11 @@
 	width: 100%;
 	display:inline-block;
 }
-
+#LinkPageView h4 {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 10px;
+}
 #LinkPageScrollView {
 	width: 85%;
 	height: 85%;

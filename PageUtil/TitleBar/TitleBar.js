@@ -1,10 +1,10 @@
-var BarTitle = "學會簡介";
-var BarList = "本會簡介";
-var Api = getAllNewMsgApi;
-var Key = "學會活動";
+
+// var Api = getAllNewMsgApi;
+// var Key = "學會活動";
 
 function titleBarInit (){
 	setInitTitleBarTitle(BarTitle,BarList);
+		TitleBarSelectItemsHidden();
 	var month = getNowMonth();
 	var TitleBarSelect = document.getElementById('TitleBarSelect');
 	var options_array = TitleBarSelect.getElementsByTagName('option')[month];
@@ -31,7 +31,7 @@ function setInitTitleBarTitle(title , list){
 	var show = title + " > " + list;
 	var bar_title = document.getElementById('BarTitle');
 	bar_title.innerHTML = show;
-	refreshList();
+	//refreshList();
 }
 
 function setTitleBarTitle(title , list){
@@ -40,7 +40,7 @@ function setTitleBarTitle(title , list){
 	var show = title + " > " + list;
 	var bar_title = document.getElementById('BarTitle');
 	bar_title.innerHTML = show;
-	refreshList();
+	//refreshList();
 }
 //沒list 就載入這
 function setTitleBarTitle2(title){
@@ -48,30 +48,30 @@ function setTitleBarTitle2(title){
 	BarList = "";
 	var bar_title = document.getElementById('BarTitle');
 	bar_title.innerHTML = title;
-	refreshList();
+	//refreshList();
 }
 
 function setIndxeBox(obj) {
 	reloadmonth = obj.value;
-	refreshList();
+	//refreshList();
 }
 
 function setIndxeYearBox(obj) {
 	reloadYear = obj.value;
-	refreshList();
+	//refreshList();
 }
 
 function refreshList() {
-	if (InitCheck == 0) {
-		refreshListData(Api,Key,reloadYear,reloadmonth,function(user_data){
-			reloadData = user_data.list;
-			var resTitle = [];
-			var resDate = [];
-			for (var i = 0; i < reloadData.length; i++) {
-				resTitle.push(reloadData[i].title);
-				resDate.push(reloadData[i].date);
-			}
-			listViewInit(resTitle,resDate);
-		});
-	}
+	// if (InitCheck == 0) {
+	// 	refreshListData(Api,Key,reloadYear,reloadmonth,function(user_data){
+	// 		reloadData = user_data.list;
+	// 		var resTitle = [];
+	// 		var resDate = [];
+	// 		for (var i = 0; i < reloadData.length; i++) {
+	// 			resTitle.push(reloadData[i].title);
+	// 			resDate.push(reloadData[i].date);
+	// 		}
+	// 		listViewInit(resTitle,resDate);
+	// 	});
+	// }
 }
