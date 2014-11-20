@@ -31,12 +31,15 @@ function setSelectedBar(items){
 			}
 			else if (BarTitle == "學會簡介") {
 				if (this.id == 0) {
+					TestData = [];
 					setPageUtil('#pgMain','Page/Information/Information.html');
 				}
 				else if (this.id == 1) {
+					TestData = [];
 					setPageUtil('#pgMain','Page/Architecture/Architecture.html');
 				}
 				else if (this.id == 2) {
+					TestData = [];
 					setPageUtil('#pgMain','Page/CallingPage/CallingPage.html');
 				}
 				else if (this.id == 3) {

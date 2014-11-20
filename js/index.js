@@ -4,6 +4,7 @@ var reloadmonth;
 
 var BarTitle = "最新消息";
 var BarList = "學會活動";
+var TestData = [];
 
 function init() {
 	var dialogView = document.getElementById("dialogView");

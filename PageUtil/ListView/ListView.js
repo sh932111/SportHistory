@@ -54,12 +54,19 @@ function setListView(title_items,date_items){
 		}
 		box_div.addEventListener("click", function(e){
 			var index = this.id;
-			if (index == 0) {
+			console.log(TestData[index]);
+			if (TestData[index] == "2014體育運動學術團體聯合年會暨學術研討會計劃書") {
 				location.href = 'test/1.pdf';
 			}
-			else if (index == 3) {
+			else if (TestData[index] == "2014體育運動學術團體聯合年會暨學術研討會-發表時程表") {
 				location.href = 'test/2.pdf';
 			}
+			// if (index == 0) {
+			// 	location.href = 'test/1.pdf';
+			// }
+			// else if (index == 3) {
+			// 	location.href = 'test/2.pdf';
+			// }
 			else {
 				var dialogView = document.getElementById("dialogView");
 				dialogView.className = "dialogShow";

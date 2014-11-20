@@ -6,10 +6,11 @@ function IndexInit(){
 		// InitCheck = 0;
 		// callApi(post_data,Api,function(user_data){
 		// 	reloadData = user_data.list;
-			var resTitle = ["2014體育運動學術團體聯合年會暨學術研討會計劃書",
-			"2014體育運動學術團體聯合年會暨學術研討會日程表","2014體育運動學術團體聯合年會暨學術研討會交通資訊",
-			"2014體育運動學術團體聯合年會暨學術研討會-發表時程表"];
-			var resDate = ["2014/11/19","2014/11/19","2014/11/19","2014/11/19"];
+			var resTitle = ["2014體育運動學術團體聯合年會暨學術研討會-發表時程表",
+			"2014體育運動學術團體聯合年會暨學術研討會計劃書",
+			"2014體育運動學術團體聯合年會暨學術研討會日程表","2014體育運動學術團體聯合年會暨學術研討會交通資訊"];
+			var resDate = ["2014/11/20","2014/11/19","2014/11/19","2014/11/19"];
+			TestData = resTitle;
 			// for (var i = 0; i < reloadData.length; i++) {
 		// 		resTitle.push(reloadData[i].title);
 		// 		resDate.push(reloadData[i].date);
@@ -31,6 +32,7 @@ function IndexInitOtherPage(){
 		// 	reloadData = user_data.list;
 			var resTitle = [];
 			var resDate = [];
+			TestData = resTitle;
 			// for (var i = 0; i < reloadData.length; i++) {
 		// 		resTitle.push(reloadData[i].title);
 		// 		resDate.push(reloadData[i].date);
@@ -42,6 +44,7 @@ function IndexInitOtherPage(){
 	});
 }
 function IndexInitDataPage(resTitle,resDate){
+	TestData = resTitle;
 	setPageUtilCallBack('#IndexBox','PageUtil/ListView/ListView.html',function(){
 		listViewInit(resTitle,resDate);
 	});
