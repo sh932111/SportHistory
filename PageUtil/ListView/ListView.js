@@ -57,6 +57,9 @@ function setListView(title_items,date_items){
 			if (index == 0) {
 				location.href = 'test/1.pdf';
 			}
+			else if (index == 3) {
+				location.href = 'test/2.pdf';
+			}
 			else {
 				var dialogView = document.getElementById("dialogView");
 				dialogView.className = "dialogShow";

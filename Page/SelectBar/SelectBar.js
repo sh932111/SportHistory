@@ -41,7 +41,9 @@ function setSelectedBar(items){
 				}
 				else if (this.id == 3) {
 					setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
-						IndexInitOtherPage();
+						var resTitle = ["2014體育運動學術團體聯合年會暨學術研討會計劃書"];
+						var resDate = ["2014/11/19"];
+						IndexInitDataPage(resTitle,resDate);
 					});
 				}
 			}
