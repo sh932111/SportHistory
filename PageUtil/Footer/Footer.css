@@ -3,7 +3,7 @@
 	height: 100%;
 	display:inline-block;
 }
-.footerView img{
+.footerViewBackground{
 	position: relative;
 	left: 0px;
 	top: 0px;
@@ -12,11 +12,16 @@
 	border-radius: 0px 0px 10px 10px;
 	z-index: -1px;
 }
-.footerView a {
+.footerViewData {
 	position: relative;
 	top: -110px;
 	right: 10px;
 	float: right;
-	color:  red;
-	font-size: 22px;
+}
+.FooterNum {
+	width:200px;
+	height: 25px;
+}
+.FooterNumTitle {
+	float: left;
 }
