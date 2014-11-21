@@ -17,4 +17,5 @@
 	overflow-x: hidden; 
 	overflow-y: auto; 
 	white-space: nowrap;
+	line-height: 26px;
 }
