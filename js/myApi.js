@@ -10,6 +10,8 @@ var getAllMsgApi = "php/get_msg.php";
 var getAllPlanApi = "php/get_plan.php";
 var getAllBookApi = "php/get_book.php";
 var getAllLinkApi = "php/get_link.php";
+var getLeafletPath = "../SportServer/php/get_leaflet_path.php";
+
 
 function setPageUtil(page_id, page_link) {
 	$.get(page_link, function(data) {
