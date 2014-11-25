@@ -3,9 +3,6 @@ include "database/database_util.php" ;
 include "database/database_select.php" ;
 
 header('Content-Type: text/html; charset=utf8');
-mysql_query("SET NAMES 'utf8'");
-mysql_query("SET CHARACTER_SET_CLIENT='utf8'");
-mysql_query("SET CHARACTER_SET_RESULTS='utf8'");
 
 $link = initDatabase();
 
@@ -15,8 +12,7 @@ if (mysql_select_db('SportData')) {
 	$data = array();
 	$list = array();
 	$i = 0;
-	$obj = selectAllTable($link,"linkTable");
-
+	$obj = selectAllNotDESCTable($link,"linkTable");
 	if (mysql_num_rows($obj) != 0) {
 		while ($record = mysql_fetch_array($obj)) 
 		{
