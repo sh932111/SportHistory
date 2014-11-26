@@ -11,8 +11,8 @@ function titleBarInit (){
 function titleBarYearReload() {
 	var month = getNowMonth();
 	var TitleBarSelect = document.getElementById('TitleBarSelect');
-	// var options_array = TitleBarSelect.getElementsByTagName('option')[month];
-	// options_array.selected = true;
+	var options_array = TitleBarSelect.getElementsByTagName('option')[0];
+	options_array.selected = true;
 	var year_text_array = [];
 	var year_array = [];
 	var year = getNowYear();
