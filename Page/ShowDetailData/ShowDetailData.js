@@ -1,6 +1,7 @@
 function ShowDetailDataInit(index) {
 	var post_data = "folder="+getFolderPath(BarTitle)+"&data_id="+reloadData[index].data_id;
 	callApi(post_data,getDataPath,function(res){
+		console.log(res);
 		if (res.img_path.length > 0) {
 			var ShowDetailDataLeafletImg = document.getElementById("ShowDetailDataLeafletImg");
 			ShowDetailDataLeafletImg.src = "../SportServer/php/"+res.img_path[0];
