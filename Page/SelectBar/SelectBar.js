@@ -42,10 +42,9 @@ function setSelectedBar(items){
 				}
 				else if (this.id == 3) {
 					TitleBarSelectItemsShow();
-					reloadYear = 0;
 					setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 						Api = getAllPlanApi;
-						PostData = "year="+reloadYear+"&month="+reloadmonth;
+						PostData = "year="+0+"&month="+reloadmonth;
 						IndexInit(Api,PostData);
 					});
 				}
