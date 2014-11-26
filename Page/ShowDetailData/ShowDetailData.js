@@ -19,26 +19,32 @@ function ShowDetailDataInit(index) {
 		var link_array = [];
 
 		var folder_img_path = res.folder_path.img;
-		for (var x = 0; x < folder_img_path.length; x++) {
-			var link_text = folder_img_path[x].replace(replace_img_path, "");
-			var link_url = "../SportServer/php/"+folder_img_path[x];
-			var link_data = {
-				link_text : link_text,
-				link_url : link_url
-			};
+		if (folder_img_path) {
+			for (var x = 0; x < folder_img_path.length; x++) {
+				var link_text = folder_img_path[x].replace(replace_img_path, "");
+				var link_url = "../SportServer/php/"+folder_img_path[x];
+				var link_data = {
+					link_text : link_text,
+					link_url : link_url
+				};
 
-			img_array.push(link_data);
-		}	
+				img_array.push(link_data);
+			}
+		}
+		
 		var folder_path = res.folder_path.file;
-		for (var x = 0; x < folder_path.length; x++) {
+		if (folder_path) {
+			
+			for (var x = 0; x < folder_path.length; x++) {
 
-			var link_text = folder_path[x].replace(replace_file_path, "");
-			var link_url = "../SportServer/php/"+folder_path[x];
-			var link_data = {
-				link_text : link_text,
-				link_url : link_url
-			};
-			link_array.push(link_data);
+				var link_text = folder_path[x].replace(replace_file_path, "");
+				var link_url = "../SportServer/php/"+folder_path[x];
+				var link_data = {
+					link_text : link_text,
+					link_url : link_url
+				};
+				link_array.push(link_data);
+			}
 		}
 
 		setPageUtilCallBack('#ShowDetailDataImg','PageUtil/ScrollImgUtil/ScrollImgUtil.html', function() {
