@@ -19,6 +19,7 @@ function ShowDetailDataInit(index) {
 
 		for (var i = 0; i < res.folder_path.length; i++) {
 			var folder_path = res.folder_path[i];
+			console.log(res);
 			if (i == 1) {
 				for (var x = 0; x < folder_path.length; x++) {
 					var link_text = folder_path[x].replace(replace_img_path, "");
