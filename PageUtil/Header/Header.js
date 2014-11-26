@@ -5,6 +5,7 @@ function goNewMsg(){
 	setSelectedBar(items);
 	headerSetTitlebar(0);
 	setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
+		reloadmonth = 0;
 		PostData = "year="+getNowYear()+"&month="+0+"&type="+"學會活動";
 		Api = getAllNewMsgApi;
 		IndexInit(Api,PostData);
@@ -26,6 +27,7 @@ function goActivity(){
 	setSelectedBar(items);
 	headerSetTitlebar(4);
 	setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
+		reloadmonth = 0;
 		PostData = "year="+getNowYear()+"&month="+0+"&type="+"社區活動";
 		Api = getAllMsgApi;
 		IndexInit(Api,PostData);
@@ -39,6 +41,7 @@ function goBookInformation(){
 	setSelectedBar(items);
 	headerSetTitlebar(6);
 	setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
+		reloadmonth = 0;
 		PostData = "year="+getNowYear()+"&month="+0+"&type="+"學報";
 		Api = getAllBookApi;
 		IndexInit(Api,PostData);
