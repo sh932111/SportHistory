@@ -20,6 +20,7 @@
 	height:60px;
 	width:60px;
 	float: right;
+	cursor: pointer;
 }
 #leafletDialogBarBt img{
 	width: 100%;

@@ -1,0 +1,72 @@
+.ShowDetailDataBox {
+	display:inline-block;
+	overflow-x: hidden; 
+	overflow-y: auto; 
+	white-space: nowrap;
+	width: 95%;
+	height: 100%;
+	margin-left: 5%;
+}
+#ShowDetailDataTitle {
+	margin-top: 5%;
+	font-weight: bolder;
+	font-size: 24px;
+	line-height: 40px;
+	height: 40px;
+}
+.ShowDetailDataImgBox {
+	margin-top: -35px;
+	float: left;
+	width: 38%;
+}
+#ShowDetailDataLeafletImg {
+	float: left;
+	width: 100%;
+}
+#ShowDetailDataDate {
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: bolder;
+	height: 30px;
+}
+.ShowDetailDataTitleBox {
+	width: 60%;
+	float: left;
+}
+#ShowDetailDataDetail {
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 16px;
+	line-height: 24px;
+}
+#ShowDetailDataImg {
+	float: left;
+	height: 200px;
+	width: 95%;
+	
+}
+.ShowDetailDataLinkTitle {
+	float: left;
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: bolder;
+	height: 30px;
+	width: 100%;
+	color: red;
+}
+#ShowDetailDataLink {
+	float: left;
+}
+#ShowDetailDataLeafletImgBtView {
+	cursor: pointer;
+	float: left;
+	height: 40px;
+	width: 40px;
+}
+.ShowDetailDataText {
+	float: left;
+}
+#ShowDetailDataLeafletImgBtView img{
+	height: 40px;
+	width: 40px;
+}

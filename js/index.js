@@ -4,16 +4,25 @@ var reloadmonth;
 
 var BarTitle = "最新消息";
 var BarList = "學會活動";
-var TestData = [];
+
+var Api;
+var PostData;
 
 function init() {
-	var dialogView = document.getElementById("dialogView");
-	dialogView.className = "dialogShow";
-	setPageUtilCallBack('#dialogView','Page/leafletDialog/leafletDialog.html',function(){
-		leafletDialogInit();
+	callApi("",getLeafletPath,function(res){
+		if (res.img_path.length > 0) {
+			var dialogView = document.getElementById("dialogView");
+			dialogView.className = "dialogShow";
+			setPageUtilCallBack('#dialogView','Page/leafletDialog/leafletDialog.html',function(){
+				leafletDialogInit("../SportServer/php/"+res.img_path[0]);
+			});
+		}
 	});
-	//reloadmonth = getNowMonth()+1;
-	//reloadYear = getNowYear();
+	
+	reloadYear = getNowYear();
+	reloadmonth = (getNowMonth()+1);
+	Api = getAllNewMsgApi;
+	PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+"學會活動";
 	setUI();
 }
 
@@ -25,7 +34,7 @@ function setUI() {
 	setPageUtil('#pgSelectBar','Page/SelectBar/SelectBar.html');
 	setPageUtil('#TitleBar','PageUtil/TitleBar/TitleBar.html');
 	setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
-		IndexInit();
+		IndexInit(Api,PostData);
 	});
 	setPageUtil('#pgFooter','PageUtil/Footer/Footer.html');
 }

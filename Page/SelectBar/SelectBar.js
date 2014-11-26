@@ -17,91 +17,59 @@ function setSelectedBar(items){
 		item_div.className = "SelectItem";
 		item_div.id = i;
 		item_div.addEventListener("click", function(e){
+			BarList = Items[this.id];
+		
 			if (BarTitle == "最新消息") {
-				if (this.id == 0) {
-					setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
-						IndexInit();
-					});
-				}
-				else {
-					setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
-						IndexInitOtherPage();
-					});
-				}
+				TitleBarSelectItemsShow();
+				setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
+					Api = getAllNewMsgApi;
+					PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
+					IndexInit(Api,PostData);
+				});
 			}
 			else if (BarTitle == "學會簡介") {
 				if (this.id == 0) {
-					TestData = [];
+					TitleBarSelectItemsHidden();
 					setPageUtil('#pgMain','Page/Information/Information.html');
 				}
 				else if (this.id == 1) {
-					TestData = [];
+					TitleBarSelectItemsHidden();
 					setPageUtil('#pgMain','Page/Architecture/Architecture.html');
 				}
 				else if (this.id == 2) {
-					TestData = [];
+					TitleBarSelectItemsHidden();
 					setPageUtil('#pgMain','Page/CallingPage/CallingPage.html');
 				}
 				else if (this.id == 3) {
+					TitleBarSelectItemsShow();
 					setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
-						var resTitle = ["2014體育運動學術團體聯合年會暨學術研討會"];
-						var resDate = ["2014/11/19"];
-						IndexInitDataPage(resTitle,resDate);
+						Api = getAllPlanApi;
+						PostData = "year="+reloadYear+"&month="+reloadmonth;
+						IndexInit(Api,PostData);
 					});
 				}
 			}
 			else if (BarTitle == "活動訊息") {
-
+				TitleBarSelectItemsShow();
+				setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
+					Api = getAllMsgApi;
+					PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
+					IndexInit(Api,PostData);
+				});
 			}
 			else if (BarTitle == "出版資訊") {
-
+				TitleBarSelectItemsShow();
+				setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
+					Api = getAllBookApi;
+					PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
+					IndexInit(Api,PostData);
+				});
 			}
-			else if (BarTitle == "相關連結") {
-
-			}
-
-			// if (HeaderTitle == "學會簡介") {
-			// 	if (Items[this.id] == "本會簡介") {
-			// 		InitCheck = 1;
-			// 		TitleBarSelectItemsHidden();
-			// 		setPageUtil('#IndexBox','Page/Information/Information.html');
-			// 	}
-			// 	else if (Items[this.id] == "組織架構") {
-			// 		InitCheck = 1;
-			// 		TitleBarSelectItemsHidden();
-			// 		setPageUtil('#IndexBox','Page/Architecture/Architecture.html');
-			// 	}
-			// 	else if (Items[this.id] == "聯絡方式") {
-			// 		InitCheck = 1;
-			// 		TitleBarSelectItemsHidden();
-			// 		setPageUtil('#IndexBox','Page/CallingPage/CallingPage.html');
-			// 	}
-			// 	else if (Items[this.id] == "年度計畫") {
-			// 		TitleBarSelectItemsShow();
-			// 		Key = "";
-			// 		Api = getAllPlanApi;
-			// 		setPageUtil('#IndexBox','PageUtil/index/index.html');
-			// 	}
-			// }
-			// else if (HeaderTitle == "出版資訊") {
-			// 	InitCheck = 1;
-			// 	Key = Items[this.id];
-			// 	Api = getAllBookApi;	
-			// 	setPageUtil('#IndexBox','PageUtil/index/index.html');
-			// }
-			// else if (HeaderTitle == "最新消息") {
-			// 	InitCheck = 1;
-			// 	if (Items[this.id] == "學會活動") {
-			// 		setPageUtil('#IndexBox','TestPage/Test1/Test1.html');
-			// 	}
-			// 	//Key = Items[this.id];
-			// 	//Api = getAllBookApi;	
-			// }
 
 			refreshTitleBar(this.id);
-        });
+		});
 		box.appendChild(item_div);
-        var line_div = document.createElement("div");
+		var line_div = document.createElement("div");
 		line_div.className = "SelectLine";
 		box.appendChild(line_div);
 	}
@@ -115,8 +83,6 @@ function setSelectedBar(items){
 //改變title bar 上的內容
 function refreshTitleBar(index){
 	if (Items.length > 0 ){
-		BarList = Items[index];
-		//Key = Items[index];
 		setTitleBarTitle(BarTitle,BarList);
 	}
 	else{

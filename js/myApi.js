@@ -11,6 +11,7 @@ var getAllPlanApi = "php/get_plan.php";
 var getAllBookApi = "php/get_book.php";
 var getAllLinkApi = "php/get_link.php";
 var getLeafletPath = "../SportServer/php/get_leaflet_path.php";
+var getDataPath = "../SportServer/php/get_data_path.php";
 
 
 function setPageUtil(page_id, page_link) {
@@ -57,4 +58,21 @@ function refreshListData(api,key,year,month,callback) {
             callback(user_data);
         }); 
     }
+}
+
+function getFolderPath(text){
+    res = "Msg";
+    if (text == "最新消息") {
+        res = "Msg";
+    }
+    else if (text == "學會簡介") {
+        res = "Plan";
+    }
+    else if (text == "活動訊息") {
+        res = "Msg";
+    }
+    else if (text == "出版資訊") {
+        res = "Book";
+    }
+    return res;
 }

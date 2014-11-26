@@ -1,5 +1,7 @@
 //8個資料一組
 
+var selectedIndex = 0;
+
 function listViewInit(res_title_items,res_date_items){
 	var title_items = [];
 	var date_items = [];
@@ -54,28 +56,10 @@ function setListView(title_items,date_items){
 		}
 		box_div.addEventListener("click", function(e){
 			var index = this.id;
-			console.log(TestData[index]);
-			if (TestData[index] == "2014體育運動學術團體聯合年會暨學術研討會計劃書") {
-				location.href = 'test/1.pdf';
-			}
-			else if (TestData[index] == "2014體育運動學術團體聯合年會暨學術研討會-發表時程表") {
-				location.href = 'test/2.pdf';
-			}
-			// if (index == 0) {
-			// 	location.href = 'test/1.pdf';
-			// }
-			// else if (index == 3) {
-			// 	location.href = 'test/2.pdf';
-			// }
-			else {
-				var dialogView = document.getElementById("dialogView");
-				dialogView.className = "dialogShow";
-			
-				setPageUtilCallBack('#dialogView','Page/ShowDataDialog/ShowDataDialog.html',function(){
-					leafletDialogInit();
-					ShowDataDialogInit(index);
-				});
-			}
+			var get_index = parseInt(index) + parseInt(selectedIndex*8);
+			setPageUtilCallBack('#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(){
+				ShowDetailDataInit(get_index);
+			});
 		});
 		box_div.appendChild(title_div);
 		box_div.appendChild(date_div);
@@ -84,6 +68,7 @@ function setListView(title_items,date_items){
 }
 
 function setListLink(data_num,selected_index,title_items,date_items){
+	selectedIndex = selected_index;
 	var ListViewIndex = document.getElementById('ListViewIndex');
 	$("#ListViewIndex").empty();
 	var box = document.createElement("div");

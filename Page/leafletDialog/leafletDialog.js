@@ -1,14 +1,7 @@
-function leafletDialogInit() {
+function leafletDialogInit(img) {
 	var leafletDialogImg = document.getElementById('leafletDialogImg');
-	callApi("",getLeafletPath,function(res){
-		if (res.img_path.length > 0) {
-			leafletDialogImg.src = "../SportServer/php/"+res.img_path[0];
-		}
-		else {
-			dialogCancel();
-		}
-	});
-
+	leafletDialogImg.src = img;
+	
 	var leafletDialogBarBt = document.getElementById('leafletDialogBarBt');
 	leafletDialogBarBt.addEventListener("click", function(e){
 		dialogCancel();

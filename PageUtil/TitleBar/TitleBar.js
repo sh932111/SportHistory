@@ -1,10 +1,14 @@
 
-// var Api = getAllNewMsgApi;
-// var Key = "學會活動";
 
 function titleBarInit (){
 	setInitTitleBarTitle(BarTitle,BarList);
-		TitleBarSelectItemsHidden();
+	
+	titleBarYearReload();
+	
+}
+//有list 就載入這
+
+function titleBarYearReload() {
 	var month = getNowMonth();
 	var TitleBarSelect = document.getElementById('TitleBarSelect');
 	var options_array = TitleBarSelect.getElementsByTagName('option')[month];
@@ -23,7 +27,6 @@ function titleBarInit (){
 	var spinner = new getSpinner();
 	spinner.loadSpinner(document.getElementById('TitleBarSelectYear'),year_text_array,year_array);
 }
-//有list 就載入這
 
 function setInitTitleBarTitle(title , list){
 	BarTitle = title;
@@ -31,7 +34,6 @@ function setInitTitleBarTitle(title , list){
 	var show = title + " > " + list;
 	var bar_title = document.getElementById('BarTitle');
 	bar_title.innerHTML = show;
-	//refreshList();
 }
 
 function setTitleBarTitle(title , list){
@@ -40,7 +42,6 @@ function setTitleBarTitle(title , list){
 	var show = title + " > " + list;
 	var bar_title = document.getElementById('BarTitle');
 	bar_title.innerHTML = show;
-	//refreshList();
 }
 //沒list 就載入這
 function setTitleBarTitle2(title){
@@ -48,30 +49,16 @@ function setTitleBarTitle2(title){
 	BarList = "";
 	var bar_title = document.getElementById('BarTitle');
 	bar_title.innerHTML = title;
-	//refreshList();
 }
 
 function setIndxeBox(obj) {
 	reloadmonth = obj.value;
-	//refreshList();
+	PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
+	IndexInit(Api,PostData);
 }
 
 function setIndxeYearBox(obj) {
 	reloadYear = obj.value;
-	//refreshList();
-}
-
-function refreshList() {
-	// if (InitCheck == 0) {
-	// 	refreshListData(Api,Key,reloadYear,reloadmonth,function(user_data){
-	// 		reloadData = user_data.list;
-	// 		var resTitle = [];
-	// 		var resDate = [];
-	// 		for (var i = 0; i < reloadData.length; i++) {
-	// 			resTitle.push(reloadData[i].title);
-	// 			resDate.push(reloadData[i].date);
-	// 		}
-	// 		listViewInit(resTitle,resDate);
-	// 	});
-	// }
+	PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
+	IndexInit(Api,PostData);
 }
