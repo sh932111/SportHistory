@@ -8,9 +8,12 @@ function ShowDetailDataInit(index) {
 			
 			var ShowDetailDataLeafletImgBtView = document.getElementById("ShowDetailDataLeafletImgBtView");
 			ShowDetailDataLeafletImgBtView.addEventListener("click", function(e){
-				console.log("ss");
 				showDetailDataBigImg("../SportServer/php/"+res.img_path[0]);
 			});
+		}
+		else {
+			var ShowDetailDataLeafletImgBox = document.getElementById("ShowDetailDataLeafletImgBox");
+			ShowDetailDataLeafletImgBox.style.display = "none";
 		}
 		var replace_file_path = res.replace_file_path;
 		var replace_img_path = res.replace_img_path;
@@ -31,6 +34,10 @@ function ShowDetailDataInit(index) {
 				img_array.push(link_data);
 			}
 		}
+		else {
+			var ShowDetailDataImg = document.getElementById("ShowDetailDataImg");
+			ShowDetailDataImg.style.display = "none";
+		}
 		
 		var folder_path = res.folder_path.file;
 		if (folder_path) {
@@ -46,7 +53,11 @@ function ShowDetailDataInit(index) {
 				link_array.push(link_data);
 			}
 		}
-
+		else {
+			var ShowDetailDataLinkBox = document.getElementById("ShowDetailDataLinkBox");
+			ShowDetailDataLinkBox.style.display = "none";
+		}
+		
 		setPageUtilCallBack('#ShowDetailDataImg','PageUtil/ScrollImgUtil/ScrollImgUtil.html', function() {
 			ScrollImgInit(img_array);
 		});
