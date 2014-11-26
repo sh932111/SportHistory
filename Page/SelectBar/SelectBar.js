@@ -45,6 +45,9 @@ function setSelectedBar(items){
 					setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 						Api = getAllPlanApi;
 						PostData = "year="+0+"&month="+reloadmonth;
+						var options_array = TitleBarSelect.getElementsByTagName('option')[0];
+						options_array.selected = true;
+	
 						IndexInit(Api,PostData);
 					});
 				}
