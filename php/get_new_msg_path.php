@@ -89,7 +89,7 @@ if (mysql_select_db('SportData')) {
 				$type = $record['type'];
 				$create_time = $record['create_time'];
 
-				if ($post_type == $type && date('Y/m/d', strtotime($date)) >= date('Y/m/d', strtotime($post_date)) && date('Y/m/d', strtotime($post_date2)) >= date('Y/m/d', strtotime($date))) {
+				if (date('Y/m/d', strtotime($date)) >= date('Y/m/d', strtotime($post_date)) && date('Y/m/d', strtotime($post_date2)) >= date('Y/m/d', strtotime($date))) {
 					$path = "../../SportServer/php/data/Msg/".$data_id;
 					$get_img = $path."/*.*";
 					$img_path = glob($get_img);
@@ -106,7 +106,7 @@ if (mysql_select_db('SportData')) {
 					$data2["img_path"] = $finish_path;
 					$list2[$i2] = $data2;
 					$i2++;
-					
+
 					break;
 				}
 			}
