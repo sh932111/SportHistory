@@ -32,6 +32,7 @@ function leftBarInit(){
 		var NavDetailImgBox1 = document.getElementById('NavDetailImgBox1');
 		NavDetailImgBox1.addEventListener("click", function(e){
 			var inputs = sliderBtFrame.getElementsByTagName('input');
+			console.log(inputs);
 			for (var i = 0; i < inputs.length; i++) {
 				var get_input = inputs[i];
 				if($(get_input).hasClass("btSelectedStyle")){
