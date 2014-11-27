@@ -12,7 +12,7 @@ function leftBarInit(){
 		for (var i = 0; i < list.length; i++) {
 			console.log(list[i].img_path);
 			var path = list[i].img_path;
-			slider_rsc.push(path[0]);
+			slider_rsc.push(path);
 		}
 	}); 
 
