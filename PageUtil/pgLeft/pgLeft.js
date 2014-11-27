@@ -12,7 +12,7 @@ function leftBarInit(){
 		for (var i = 0; i < list.length; i++) {
 			var path = list[i].img_path;
 			console.log(path);
-			slider_rsc.push(path);
+			slider_rsc.push("../SportServer/php/data/Msg/2014112618419/8.jpg");
 		}
 	}); 
 
