@@ -50,7 +50,8 @@ if (mysql_select_db('SportData')) {
 				$path = "../../SportServer/php/data/Msg/".$data_id;
 				$get_img = $path."/*.*";
 				$img_path = glob($get_img);
-				$img_path_finish = "./php/".$img_path[0];
+
+				$finish_path = str_replace ("../../","../",$img_path[0]);
 				$data["data_id"] = $data_id;
 				$data["title"] = $title;
 				$data["detail"] = back_space_and_br($detail);
@@ -59,7 +60,7 @@ if (mysql_select_db('SportData')) {
 				$data["link"] = $t_link;
 				$data["type"] = $type;
 				$data["create_time"] = $create_time;
-				$data["img_path"] = $img_path_finish;
+				$data["img_path"] = $finish_path;
 
 				$list[$i] = $data;
 				$i = $i + 1;
