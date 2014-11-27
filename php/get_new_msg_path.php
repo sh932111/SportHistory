@@ -47,7 +47,7 @@ if (mysql_select_db('SportData')) {
 			$create_time = $record['create_time'];
 
 			if ($new_msg_check && $post_type == $type && date('Y/m/d', strtotime($date)) >= date('Y/m/d', strtotime($post_date)) && date('Y/m/d', strtotime($post_date2)) >= date('Y/m/d', strtotime($date))) {
-				$path = "data/Msg/".$data_id;
+				$path = "../../SportServer/data/Msg/".$data_id;
 				$get_img = $path."/*.*";
 				$img_path = glob($get_img);
 				
