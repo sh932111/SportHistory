@@ -31,7 +31,7 @@ function leftBarInit(){
 
 		var NavDetailImgBox1 = document.getElementById('NavDetailImgBox1');
 		NavDetailImgBox1.addEventListener("click", function(e){
-			reloadData = list;
+			//reloadData = list;
 			TitleBarSelectItemsShow();
 			var items = getHeaderNewMsg();
 			setSelectedBar(items);
@@ -42,7 +42,8 @@ function leftBarInit(){
 					var get_input = inputs[i];
 					if($(get_input).hasClass("navSelectedStyle")){
 						setPageUtilCallBack('#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(){
-							ShowDetailDataInit(i);
+							reloadData = list[i];
+							ShowDetailDataInit(0);
 						});
 					}
 				}
@@ -50,7 +51,6 @@ function leftBarInit(){
 		});
 		var NavDetailImgBox2 = document.getElementById('NavDetailImgBox2');
 		NavDetailImgBox2.addEventListener("click", function(e){
-			reloadData = list2;
 			TitleBarSelectItemsShow();
 			var items = getHeaderActivity();
 			setSelectedBar(items);
@@ -61,7 +61,8 @@ function leftBarInit(){
 					var get_input = inputs[i];
 					if($(get_input).hasClass("navSelectedStyle")){
 						setPageUtilCallBack('#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(){
-							ShowDetailDataInit(i);
+							reloadData = list2[i];
+							ShowDetailDataInit(0);
 						});
 					}
 				}
