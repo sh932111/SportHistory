@@ -4,11 +4,11 @@ function leftBarInit(){
 	var slidersBt2 = new Array();
 	var sliders2 = new Array();
 	
-	var post_data = "year="+getNowYear()+"&month="+(getNowMonth()+1)+"&type="+"學會活動";
+	var post_data = "year="+getNowYear()+"&month="+0+"&type="+"學會活動";
 	callApi(post_data,getAllNewMsgPathApi,function(user_data){
 		console.log(user_data);
 	}); 
-	
+
 	var slider_rsc = ["img/test.jpg"];
 	var slider_rsc2 = ["img/test.jpg"];
 		
