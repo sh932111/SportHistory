@@ -31,18 +31,41 @@ function leftBarInit(){
 
 		var NavDetailImgBox1 = document.getElementById('NavDetailImgBox1');
 		NavDetailImgBox1.addEventListener("click", function(e){
-			var inputs = sliderBtFrame.getElementsByTagName('input');
-			console.log(inputs);
-			for (var i = 0; i < inputs.length; i++) {
-				var get_input = inputs[i];
-				if($(get_input).hasClass("navSelectedStyle")){
-					console.log(i);
+			reloadData = list;
+			TitleBarSelectItemsShow();
+			var items = getHeaderNewMsg();
+			setSelectedBar(items);
+			headerSetTitlebar(0);
+			setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
+				var inputs = sliderBtFrame.getElementsByTagName('input');
+				for (var i = 0; i < inputs.length; i++) {
+					var get_input = inputs[i];
+					if($(get_input).hasClass("navSelectedStyle")){
+						setPageUtilCallBack('#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(){
+							ShowDetailDataInit(i);
+						});
+					}
 				}
-			}
+			});
 		});
 		var NavDetailImgBox2 = document.getElementById('NavDetailImgBox2');
 		NavDetailImgBox2.addEventListener("click", function(e){
-
+			reloadData = list2;
+			TitleBarSelectItemsShow();
+			var items = getHeaderActivity();
+			setSelectedBar(items);
+			headerSetTitlebar(4);
+			setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
+				var inputs = sliderBtFrame2.getElementsByTagName('input');
+				for (var i = 0; i < inputs.length; i++) {
+					var get_input = inputs[i];
+					if($(get_input).hasClass("navSelectedStyle")){
+						setPageUtilCallBack('#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(){
+							ShowDetailDataInit(i);
+						});
+					}
+				}
+			});
 		});
 	}); 
 }
