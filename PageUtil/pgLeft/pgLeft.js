@@ -41,6 +41,7 @@ function leftBarInit(){
 				var inputs = sliderBtFrame.getElementsByTagName('input');
 				for (var i = 0; i < inputs.length; i++) {
 					var get_input = inputs[i];
+					console.log(i);
 					if($(get_input).hasClass("navSelectedStyle")){
 						setPageUtilCallBack('#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(){
 							ShowDetailDataInit(i);
