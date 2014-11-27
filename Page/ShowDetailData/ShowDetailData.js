@@ -1,5 +1,7 @@
 function ShowDetailDataInit(index) {
 	console.log(reloadData[index]);
+	console.log(index);
+	console.log(reloadData);
 	var post_data = "folder="+getFolderPath(BarTitle)+"&data_id="+reloadData[index].data_id;
 	callApi(post_data,getDataPath,function(res){
 		console.log(res);
