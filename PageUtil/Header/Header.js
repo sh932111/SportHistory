@@ -76,3 +76,15 @@ function headerSetTitlebar(index){
 	setTitleBarTitle(nav_array[index].getAttribute('value'),select_array[0].value);
 }
 
+function headerSetTitlebar2(index,i){
+	reloadYear = getNowYear();
+	titleBarYearReload();
+	reloadmonth = (getNowMonth()+1);
+	var nav_view = document.getElementById('NavView');
+	var selectbox = document.getElementById('SelectBarBox');
+	var nav_array = nav_view.getElementsByTagName("div");
+	var select_array = selectbox.getElementsByTagName("div");
+	var nav_item = nav_array[index];
+	setTitleBarTitle(nav_array[index].getAttribute('value'),select_array[i].value);
+}
+

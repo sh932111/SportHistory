@@ -55,12 +55,12 @@ function leftBarInit(){
 			TitleBarSelectItemsShow();
 			var items = getHeaderActivity();
 			setSelectedBar(items);
-			headerSetTitlebar(4);
 			reloadmonth = 0;
 			setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 				var inputs = sliderBtFrame2.getElementsByTagName('input');
 				for (var i = 0; i < inputs.length; i++) {
 					var get_input = inputs[i];
+					headerSetTitlebar2(4,get_input.id);
 					if($(get_input).hasClass("navSelectedStyle")){
 						setPageUtilCallBackIndex(get_input.id,'#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(index){
 							ShowDetailDataInit(index);
