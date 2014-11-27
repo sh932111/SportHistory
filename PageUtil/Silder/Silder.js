@@ -14,25 +14,25 @@ function sliderInit(){
 //放入圖片的array,放入button的array,css style 關閉,css style 打開
 function openSlider(slider_rsc ,sliderBtFrame,sliderImg,time,sliders,slidersBt,bt_off,bt_on){
 	var index = 0;
-	for (var i = 0; i < slider_rsc.length; i++) {
-		var img = slider_rsc[i];
-		var slider = new Image();
-		slider.src = img;
-		sliders.push(slider);
-		var bt = document.createElement("input");
-		setBtStatus(bt,0,i,bt_off,bt_on);
-		sliderBtFrame.appendChild(bt);
-		slidersBt.push(bt);
+	if (slider_rsc.length > 0) {
+		for (var i = 0; i < slider_rsc.length; i++) {
+			var img = slider_rsc[i];
+			var slider = new Image();
+			slider.src = img;
+			sliders.push(slider);
+			var bt = document.createElement("input");
+			setBtStatus(bt,0,i,bt_off,bt_on);
+			sliderBtFrame.appendChild(bt);
+			slidersBt.push(bt);
+		}
+		sliderImg.src = sliders[index].src;
+		setTimeout(function(){change(index,time,sliders,slidersBt,sliderImg,bt_off,bt_on)},time);
 	}
-	sliderImg.src = sliders[index].src;
-
-	setTimeout(function(){change(index,time,sliders,slidersBt,sliderImg,bt_off,bt_on)},time);
 }
 
 function change(index,time,sliders,slidersBt,sliderImg,bt_off,bt_on){ 
 	index ++;
-	if (index > sliders.length - 1)
-	{
+	if (index > sliders.length - 1){
 		index = 0;
 	}
 	sliderImg.src = sliders[index].src;
@@ -53,8 +53,8 @@ function change(index,time,sliders,slidersBt,sliderImg,bt_off,bt_on){
 var pfx = ["webkit", "moz", "MS", "o", ""];
 function PrefixedEvent(element, type, callback) {
 	for (var p = 0; p < pfx.length; p++) {
-    	if (!pfx[p]) type = type.toLowerCase();
-    	element.addEventListener(pfx[p]+type, callback, false);
+		if (!pfx[p]) type = type.toLowerCase();
+		element.addEventListener(pfx[p]+type, callback, false);
 	}
 }
 
@@ -65,12 +65,10 @@ function listener(e) {
 function setBtStatus(bt,index,i,bt_off,bt_on)
 {
 	bt.setAttribute("type", "button");
-	if (index != i)
-	{
+	if (index != i){
 		bt.className = bt_off;
 	}
-	else
-	{
+	else{
 		bt.className = bt_on;
 	}
 }

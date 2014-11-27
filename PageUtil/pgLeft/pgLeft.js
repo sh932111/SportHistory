@@ -1,3 +1,4 @@
+
 function leftBarInit(){ 
 	var slidersBt = new Array();
 	var sliders = new Array();
@@ -31,7 +32,13 @@ function leftBarInit(){
 
 		var NavDetailImgBox1 = document.getElementById('NavDetailImgBox1');
 		NavDetailImgBox1.addEventListener("click", function(e){
-
+			var inputs = sliderBtFrame.getElementsByTagName('input');
+			for (var i = 0; i < inputs.length; i++) {
+				var get_input = inputs[i];
+				if($(get_input).hasClass("btSelectedStyle"){
+					console.log(i);
+				}
+			}
 		});
 		var NavDetailImgBox2 = document.getElementById('NavDetailImgBox2');
 		NavDetailImgBox2.addEventListener("click", function(e){
