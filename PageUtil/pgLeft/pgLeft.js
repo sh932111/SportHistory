@@ -43,7 +43,7 @@ function leftBarInit(){
 					if($(get_input).hasClass("navSelectedStyle")){
 						setPageUtilCallBack('#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(){
 							reloadData = list[i];
-							ShowDetailDataInit(0);
+							ShowDetailDataInit2();
 						});
 					}
 				}
@@ -62,7 +62,7 @@ function leftBarInit(){
 					if($(get_input).hasClass("navSelectedStyle")){
 						setPageUtilCallBack('#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(){
 							reloadData = list2[i];
-							ShowDetailDataInit(0);
+							ShowDetailDataInit2();
 						});
 					}
 				}
