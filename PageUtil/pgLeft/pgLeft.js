@@ -63,7 +63,7 @@ function leftBarInit(){
 					var get_input = inputs[i];
 					if($(get_input).hasClass("navSelectedStyle")){
 						setPageUtilCallBack('#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(){
-							ShowDetailDataInit(i);
+							ShowDetailDataInit(get_input.id);
 						});
 					}
 				}
