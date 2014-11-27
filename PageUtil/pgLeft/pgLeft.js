@@ -3,13 +3,18 @@ function leftBarInit(){
 	var sliders = new Array();
 	var slidersBt2 = new Array();
 	var sliders2 = new Array();
+
+	var slider_rsc = [];
 	
 	var post_data = "year="+getNowYear()+"&month="+0+"&type="+"學會活動";
 	callApi(post_data,getAllNewMsgPathApi,function(user_data){
-		console.log(user_data);
+		var list = user_data.list;
+		for (var i = 0; i < list.length; i++) {
+			var path = list[i].img_path;
+			slider_rsc.push(path[0]);
+		}
 	}); 
 
-	var slider_rsc = ["img/test.jpg"];
 	var slider_rsc2 = ["img/test.jpg"];
 		
 	var sliderBtFrame = document.getElementById('NavBtFrame');
