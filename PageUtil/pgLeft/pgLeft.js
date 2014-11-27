@@ -16,6 +16,7 @@ function leftBarInit(){
 		var list2 = user_data.list2;
 		for (var i = 0; i < list2.length; i++) {
 			var path = list2[i].img_path;
+			console.log(path);
 			slider_rsc2.push(path);
 		}
 		

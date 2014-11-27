@@ -106,6 +106,7 @@ if (mysql_select_db('SportData')) {
 					$data2["img_path"] = $finish_path;
 					$list2[$i2] = $data2;
 					$i2++;
+					
 					break;
 				}
 			}
