@@ -1,8 +1,8 @@
 function ShowDetailDataInit(index) {
 	var post_data = "folder="+getFolderPath(BarTitle)+"&data_id="+reloadData[index].data_id;
 	callApi(post_data,getDataPath,function(res){
+		var ShowDetailDataLeafletImg = document.getElementById("ShowDetailDataLeafletImg");
 		if (res.img_path.length > 0) {
-			var ShowDetailDataLeafletImg = document.getElementById("ShowDetailDataLeafletImg");
 			ShowDetailDataLeafletImg.src = "../SportServer/php/"+res.img_path[0];
 			
 			var ShowDetailDataLeafletImgBtView = document.getElementById("ShowDetailDataLeafletImgBtView");
@@ -13,6 +13,7 @@ function ShowDetailDataInit(index) {
 		else {
 			var ShowDetailDataLeafletImgBox = document.getElementById("ShowDetailDataLeafletImgBox");
 			ShowDetailDataLeafletImgBox.style.display = "none";
+			ShowDetailDataLeafletImg.style.display = "none";
 		}
 		var replace_file_path = res.replace_file_path;
 		var replace_img_path = res.replace_img_path;
