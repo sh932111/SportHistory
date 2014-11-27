@@ -10,16 +10,10 @@ mysql_query("SET CHARACTER_SET_RESULTS='utf8'");
 $year = $_POST["year"];
 $month = $_POST["month"];
 $post_type = $_POST["type"];
-$post_date;
-$post_date2;
-if ($month == 0) {
-	$post_date = $year."/1/1";
-	$post_date2 = $year."/12/31";
-}
-else {
-	$post_date = $year."/".$month."/1";
-	$post_date2 = $year."/".$month."/31";
-}
+
+$post_date = $year."/".$month."/1";
+$post_date2 = $year."/".$month."/31";
+
 $link = initDatabase();
 
 mysql_query("SET NAMES 'utf8'",$link);
@@ -28,6 +22,8 @@ if (mysql_select_db('SportData')) {
 	$data = array();
 	$list = array();
 	$i = 0;
+	$new_msg_check = true;
+
 	$obj = selectAllTable($link,"newMsgTable");
 
 	if (mysql_num_rows($obj) != 0) {
@@ -42,22 +38,23 @@ if (mysql_select_db('SportData')) {
 			$type = $record['type'];
 			$create_time = $record['create_time'];
 
-			$path = "../../SportService/php/data/Msg/".$data_id."/*.jpg";
-			$data_list = glob($path);
-			
-			$data["data_id"] = $data_id;
-			$data["title"] = $title;
-			$data["detail"] = $detail;
-			$data["date"] = $date;
-			$data["time"] = $time;
-			$data["link"] = $t_link;
-			$data["type"] = $type;
-			$data["create_time"] = $create_time;
-			$data["path"] = $data_list;
-			$list[$i] = $data;
+			if ($new_msg_check && $post_type == $type && date('Y/m/d', strtotime($date)) >= date('Y/m/d', strtotime($post_date)) && date('Y/m/d', strtotime($post_date2)) >= date('Y/m/d', strtotime($date))) {
+				
+				$data["data_id"] = $data_id;
+				$data["title"] = $title;
+				$data["detail"] = back_space_and_br($detail);
+				$data["date"] = $date;
+				$data["time"] = $time;
+				$data["link"] = $t_link;
+				$data["type"] = $type;
+				$data["create_time"] = $create_time;
 
-			$i = $i + 1;
-
+				$list[$i] = $data;
+				$i = $i + 1;
+				if ($i == 4) {
+					$new_msg_check = false;
+				}
+			}
 		}
 	}
 
