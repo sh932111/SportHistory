@@ -35,7 +35,6 @@ function leftBarInit(){
 			TitleBarSelectItemsShow();
 			var items = getHeaderNewMsg();
 			setSelectedBar(items);
-			headerSetTitlebar(0);
 			reloadmonth = 0;
 			setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 				var inputs = sliderBtFrame.getElementsByTagName('input');
@@ -56,7 +55,6 @@ function leftBarInit(){
 			var items = getHeaderActivity();
 			setSelectedBar(items);
 			reloadmonth = 0;
-			headerSetTitlebar(4);
 			setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 				var inputs = sliderBtFrame2.getElementsByTagName('input');
 				for (var i = 0; i < inputs.length; i++) {
