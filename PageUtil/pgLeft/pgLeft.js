@@ -42,9 +42,8 @@ function leftBarInit(){
 				for (var i = 0; i < inputs.length; i++) {
 					var get_input = inputs[i];
 					if($(get_input).hasClass("navSelectedStyle")){
-					console.log(get_input);
-						setPageUtilCallBack('#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(){
-							ShowDetailDataInit(get_input.id);
+						setPageUtilCallBackIndex(get_input.id,'#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(index){
+							ShowDetailDataInit(index);
 						});
 					}
 				}
@@ -63,8 +62,8 @@ function leftBarInit(){
 				for (var i = 0; i < inputs.length; i++) {
 					var get_input = inputs[i];
 					if($(get_input).hasClass("navSelectedStyle")){
-						setPageUtilCallBack('#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(){
-							ShowDetailDataInit(get_input.id);
+						setPageUtilCallBackIndex(get_input.id,'#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(index){
+							ShowDetailDataInit(index);
 						});
 					}
 				}

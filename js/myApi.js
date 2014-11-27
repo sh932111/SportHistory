@@ -24,7 +24,11 @@ function setPageUtilCallBack(page_id, page_link,callback) {
         callback();
     });
 }
-
+function setPageUtilCallBackIndex(index,page_id, page_link,callback) {
+    $(page_id).load(page_link, function() {
+        callback(index);
+    });
+}
 function callApi(post_data,api,callback) {
 	var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", api, true);
