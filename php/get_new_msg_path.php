@@ -32,7 +32,7 @@ if (mysql_select_db('SportData')) {
 	$i = 0;
 	$new_msg_check = true;
 
-	$obj = selectAllTable($link,"newMsgTable");
+	$obj = selectAllTableLeft($link,"newMsgTable");
 
 	if (mysql_num_rows($obj) != 0) {
 		while ($record = mysql_fetch_array($obj)) 
