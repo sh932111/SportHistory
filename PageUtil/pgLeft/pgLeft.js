@@ -10,6 +10,7 @@ function leftBarInit(){
 	callApi(post_data,getAllNewMsgPathApi,function(user_data){
 		var list = user_data.list;
 		for (var i = 0; i < list.length; i++) {
+			console.log(list[i].img_path);
 			var path = list[i].img_path;
 			slider_rsc.push(path[0]);
 		}
