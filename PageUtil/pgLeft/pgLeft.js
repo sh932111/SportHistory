@@ -41,6 +41,7 @@ function leftBarInit(){
 				for (var i = 0; i < inputs.length; i++) {
 					var get_input = inputs[i];
 					if($(get_input).hasClass("navSelectedStyle")){
+						setTitleBarTitle("最新消息" , "學會活動");
 						setPageUtilCallBackIndex(get_input.id,'#IndexBox','Page/ShowDetailData/ShowDetailData.html',function(index){
 							ShowDetailDataInit(index);
 						});
