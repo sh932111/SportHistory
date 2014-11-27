@@ -35,7 +35,7 @@ function leftBarInit(){
 			console.log(inputs);
 			for (var i = 0; i < inputs.length; i++) {
 				var get_input = inputs[i];
-				if($(get_input).hasClass("btSelectedStyle")){
+				if($(get_input).hasClass("navSelectedStyle")){
 					console.log(i);
 				}
 			}
