@@ -5,7 +5,7 @@ function leftBarInit(){
 	var sliders2 = new Array();
 
 	var slider_rsc = [];
-	
+	var slider_rsc2 = [];
 	var post_data = "year="+getNowYear()+"&month="+0+"&type="+"學會活動";
 	callApi(post_data,getAllNewMsgPathApi,function(user_data){
 		var list = user_data.list;
@@ -13,8 +13,11 @@ function leftBarInit(){
 			var path = list[i].img_path;
 			slider_rsc.push(path);
 		}
-
-		var slider_rsc2 = ["img/test.jpg"];
+		var list2 = user_data.list2;
+		for (var i = 0; i < list2.length; i++) {
+			var path = list2[i].img_path;
+			slider_rsc2.push(path);
+		}
 		
 		var sliderBtFrame = document.getElementById('NavBtFrame');
 		var sliderImg = document.getElementById('NavDetailImg');

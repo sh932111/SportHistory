@@ -71,9 +71,51 @@ if (mysql_select_db('SportData')) {
 		}
 	}
 
+	$data2 = array();
+	$list2 = array();
+	$i2 = 0;
+
+	for ($z=0; $z < 4; $z++) { 
+		$obj2 = selectAllTableLeft2($link,"msgTable",getKey($z));
+		if (mysql_num_rows($obj2) != 0) {
+			while ($record = mysql_fetch_array($obj2)) 
+			{
+				$data_id = $record['data_id'];
+				$title = $record['title'];
+				$detail = $record['detail'];
+				$date = $record['date'];
+				$time = $record['time'];
+				$t_link = $record['link'];
+				$type = $record['type'];
+				$create_time = $record['create_time'];
+
+				if ($post_type == $type && date('Y/m/d', strtotime($date)) >= date('Y/m/d', strtotime($post_date)) && date('Y/m/d', strtotime($post_date2)) >= date('Y/m/d', strtotime($date))) {
+					$path = "../../SportServer/php/data/Msg/".$data_id;
+					$get_img = $path."/*.*";
+					$img_path = glob($get_img);
+
+					$finish_path = str_replace ("../../","../",$img_path[0]);
+					$data2["data_id"] = $data_id;
+					$data2["title"] = $title;
+					$data2["detail"] = back_space_and_br($detail);
+					$data2["date"] = $date;
+					$data2["time"] = $time;
+					$data2["link"] = $t_link;
+					$data2["type"] = $type;
+					$data2["create_time"] = $create_time;
+					$data2["img_path"] = $finish_path;
+					$list2[$i2] = $data2;
+					$i2++;
+					break;
+				}
+			}
+		}
+	}
+
 	$arr["result"]= true;
 	$arr["message"]="sucess";
 	$arr["list"] = $list;
+	$arr["list2"] = $list2;
 	$res["data"] = $arr;
 
 	echo json_encode($res);
@@ -90,4 +132,14 @@ else {
 	exit();
 }
 
+function getKey($index){
+	if($index == 0)
+		return "社區活動";
+	else if($index == 1)
+		return "研習活動";
+	else if($index == 2)
+		return "運動研討會";
+	else
+		return "學術活動";
+}
 ?>
