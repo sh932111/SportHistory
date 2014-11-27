@@ -21,6 +21,7 @@ function openSlider(slider_rsc ,sliderBtFrame,sliderImg,time,sliders,slidersBt,b
 			slider.src = img;
 			sliders.push(slider);
 			var bt = document.createElement("input");
+			bt.id=i;
 			setBtStatus(bt,0,i,bt_off,bt_on);
 			sliderBtFrame.appendChild(bt);
 			slidersBt.push(bt);
