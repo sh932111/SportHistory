@@ -17,6 +17,8 @@
 	top: -110px;
 	right: 10px;
 	float: right;
+	font-size: 12px;
+	line-height: 16px;
 }
 .FooterNum {
 	width:200px;

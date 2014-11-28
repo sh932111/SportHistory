@@ -10,14 +10,18 @@ function leftBarInit(){
 	var post_data = "year="+getNowYear()+"&month="+0+"&type="+"學會活動";
 	callApi(post_data,getAllNewMsgPathApi,function(user_data){
 		var list = user_data.list;
-		for (var i = 0; i < list.length; i++) {
-			var path = list[i].img_path;
-			slider_rsc.push(path);
+		if (list) {
+			for (var i = 0; i < list.length; i++) {
+				var path = list[i].img_path;
+				slider_rsc.push(path);
+			}
 		}
 		var list2 = user_data.list2;
-		for (var i = 0; i < list2.length; i++) {
-			var path = list2[i].img_path;
-			slider_rsc2.push(path);
+		if (list2) {
+			for (var i = 0; i < list2.length; i++) {
+				var path = list2[i].img_path;
+				slider_rsc2.push(path);
+			}
 		}
 		
 		var sliderBtFrame = document.getElementById('NavBtFrame');
