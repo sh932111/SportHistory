@@ -22,4 +22,11 @@ function selectAllTableLeft2($link,$table_name,$key) {
 	$obj = mysql_query($action, $link);
 	return $obj;
 }
+
+function login($link,$table_name) {
+	$action = sprintf("SELECT * FROM `$table_name` ");
+	$obj = mysql_query($action, $link);
+	return mysql_fetch_array($obj);
+}
+
 ?>

@@ -38,7 +38,9 @@ function setSelectedBar(items){
 				}
 				else if (this.id == 2) {
 					TitleBarSelectItemsHidden();
-					setPageUtil('#pgMain','Page/CallingPage/CallingPage.html');
+					setPageUtilCallBack('#pgMain','Page/CallingPage/CallingPage.html',function(){
+						CallingInit();
+					});
 				}
 				else if (this.id == 3) {
 					TitleBarSelectItemsShow();

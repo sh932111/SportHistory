@@ -12,6 +12,7 @@ var getAllBookApi = "php/get_book.php";
 var getAllLinkApi = "php/get_link.php";
 var getLeafletPath = "../SportServer/php/get_leaflet_path.php";
 var getDataPath = "../SportServer/php/get_data_path.php";
+var getRoot = "php/get_root.php";
 
 
 function setPageUtil(page_id, page_link) {
