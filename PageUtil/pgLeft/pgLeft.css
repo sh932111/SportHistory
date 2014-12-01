@@ -61,6 +61,7 @@
 	height: 115px;
 }
 .NavBtFrameStyle{
+	margin-bottom: 10px;
 	width: 90%;
 	height: 25px;
 	border-radius:0px 0px 5px 5px;
