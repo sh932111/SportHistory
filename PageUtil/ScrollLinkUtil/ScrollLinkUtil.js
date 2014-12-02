@@ -14,6 +14,7 @@ function ScrollLinkInit(link_array) {
 			a_link.href = link_array[i].link_url;
 		}
 		a_link.target = "_blank";
+		a_link.className = "aLinkStyle";
 		ScrollLinkUtilViewBox.appendChild(a_link);
 		ScrollLinkUtilView.appendChild(ScrollLinkUtilViewBox);
 	}
