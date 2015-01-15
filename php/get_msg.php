@@ -43,7 +43,23 @@ if (mysql_select_db('SportData')) {
 			$type = $record['type'];
 			$create_time = $record['create_time'];
 			
-			if ($post_type == $type && date('Y/m/d', strtotime($date)) >= date('Y/m/d', strtotime($post_date)) && date('Y/m/d', strtotime($post_date2)) >= date('Y/m/d', strtotime($date))) 
+			if ($year != 0 && $post_type == $type && date('Y/m/d', strtotime($date)) >= date('Y/m/d', strtotime($post_date)) && date('Y/m/d', strtotime($post_date2)) >= date('Y/m/d', strtotime($date))) 
+			{
+				$data["data_id"] = $data_id;
+				$data["title"] = $title;
+				$data["detail"] = $detail;
+				$data["date"] = $date;
+				$data["time"] = $time;
+				$data["image"] = $image;
+				$data["link"] = $t_link;
+				$data["type"] = $type;
+				$data["create_time"] = $create_time;
+
+				$list[$i] = $data;
+
+				$i = $i + 1;
+			}
+			else if($year == 0)
 			{
 				$data["data_id"] = $data_id;
 				$data["title"] = $title;

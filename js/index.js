@@ -19,7 +19,7 @@ function init() {
 		}
 	});
 	
-	reloadYear = getNowYear();
+	reloadYear = 0//getNowYear();
 	reloadmonth = 0;//(getNowMonth()+1);
 	Api = getAllNewMsgApi;
 	PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+"學會活動";
