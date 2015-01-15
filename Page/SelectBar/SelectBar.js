@@ -121,4 +121,6 @@ function reSetTitleBar() {
 	// 	}
 	// }
 	$('#TitleBarSelectYear option[value=0]').attr('selected', 'selected');
+	reloadYear = 0;
+	reloadmonth = 0;
 }
