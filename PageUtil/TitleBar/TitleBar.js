@@ -68,5 +68,6 @@ function setIndxeYearBox(obj) {
 		document.getElementById('TitleBarSelect').style.display = "";
 	}
 	PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
+	//console.log(PostData);
 	IndexInit(Api,PostData);
 }
