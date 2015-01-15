@@ -21,6 +21,11 @@ function setSelectedBar(items){
 		
 			if (BarTitle == "最新消息") {
 				TitleBarSelectItemsShow();
+				document.getElementById('TitleBarSelect').style.display = "none";
+				// var options_array = TitleBarSelect.getElementsByTagName('option')[0];
+				// options_array.selected = true;
+				//console.log(options_array);
+				reSetTitleBar();
 				setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 					Api = getAllNewMsgApi;
 					PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
@@ -50,15 +55,17 @@ function setSelectedBar(items){
 						reloadYear = 0;
 						PostData = "year="+reloadYear+"&month="+reloadmonth;
 						document.getElementById('TitleBarSelect').style.display = "none";
-						var options_array = TitleBarSelect.getElementsByTagName('option')[0];
-						options_array.selected = true;
-	
+						// var options_array = TitleBarSelect.getElementsByTagName('option')[0];
+						// options_array.selected = true;
+						reSetTitleBar()
 						IndexInit(Api,PostData);
 					});
 				}
 			}
 			else if (BarTitle == "活動訊息") {
 				TitleBarSelectItemsShow();
+				document.getElementById('TitleBarSelect').style.display = "none";
+				reSetTitleBar()
 				setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 					Api = getAllMsgApi;
 					PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
@@ -67,6 +74,8 @@ function setSelectedBar(items){
 			}
 			else if (BarTitle == "出版資訊") {
 				TitleBarSelectItemsShow();
+				document.getElementById('TitleBarSelect').style.display = "none";
+				reSetTitleBar();
 				setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 					Api = getAllBookApi;
 					PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
@@ -100,3 +109,16 @@ function refreshTitleBar(index){
 	}
 }
 
+function reSetTitleBar() {
+	// var options_array = TitleBarSelect.getElementsByTagName('option');
+	// for (var i = 0; i < options_array.length; i++) {
+	// 	if (i == 0) {
+	// 		options_array[i].selected = true;
+
+	// 	}
+	// 	else {
+	// 		options_array[i].selected = false;
+	// 	}
+	// }
+	$('#TitleBarSelectYear option[value=0]').attr('selected', 'selected');
+}
