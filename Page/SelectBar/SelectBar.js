@@ -46,7 +46,7 @@ function setSelectedBar(items){
 					TitleBarSelectItemsShow();
 					setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 						Api = getAllPlanApi;
-						PostData = "year="+reloadYear+"&month="+reloadmonth;
+						PostData = "year="+0+"&month="+0;
 						document.getElementById('TitleBarSelect').style.display = "none";
 						var options_array = TitleBarSelect.getElementsByTagName('option')[0];
 						options_array.selected = true;
