@@ -1,6 +1,7 @@
 
 function IndexInit(api,post_data){
 	setPageUtilCallBack('#IndexBox','PageUtil/ListView/ListView.html',function(){
+		console.log(api);
 		callApi(post_data,api,function(user_data){
 			reloadData = user_data.list;
 			if (user_data.result) {
