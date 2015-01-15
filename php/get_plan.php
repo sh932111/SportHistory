@@ -40,7 +40,7 @@ if (mysql_select_db('SportData')) {
 			$t_link = $record['link'];
 			$create_time = $record['create_time'];
 			
-			if (/*$year != 0 &&*/ date('Y/m/d', strtotime($date)) >= date('Y/m/d', strtotime($post_date)) && date('Y/m/d', strtotime($post_date2)) >= date('Y/m/d', strtotime($date))) 
+			if ($year != 0 && date('Y/m/d', strtotime($date)) >= date('Y/m/d', strtotime($post_date)) && date('Y/m/d', strtotime($post_date2)) >= date('Y/m/d', strtotime($date))) 
 			{
 				$data["data_id"] = $data_id;
 				$data["title"] = $title;
@@ -54,20 +54,20 @@ if (mysql_select_db('SportData')) {
 
 				$i = $i + 1;
 			}
-			// else if ($year == 0)
-			// {
-			// 	$data["data_id"] = $data_id;
-			// 	$data["title"] = $title;
-			// 	$data["detail"] = $detail;
-			// 	$data["date"] = $date;
-			// 	$data["time"] = $time;
-			// 	$data["link"] = $t_link;
-			// 	$data["create_time"] = $create_time;
+			else if ($year == 0)
+			{
+				$data["data_id"] = $data_id;
+				$data["title"] = $title;
+				$data["detail"] = $detail;
+				$data["date"] = $date;
+				$data["time"] = $time;
+				$data["link"] = $t_link;
+				$data["create_time"] = $create_time;
 
-			// 	$list[$i] = $data;
+				$list[$i] = $data;
 
-			// 	$i = $i + 1;
-			// } 
+				$i = $i + 1;
+			} 
 		}
 	}
 
