@@ -27,6 +27,7 @@ function setSelectedBar(items){
 				//console.log(options_array);
 				reSetTitleBar();
 				setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
+					//console.log(BarList);
 					Api = getAllNewMsgApi;
 					PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
 					IndexInit(Api,PostData);

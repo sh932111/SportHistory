@@ -57,7 +57,7 @@ if (mysql_select_db('SportData')) {
 
 				$i = $i + 1;
 			}
-			else if($year == 0) 
+			else if($year == 0&& $post_type == $type ) 
 			{
 				$data["data_id"] = $data_id;
 				$data["title"] = $title;
