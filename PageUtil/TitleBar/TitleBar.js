@@ -61,6 +61,12 @@ function setIndxeBox(obj) {
 
 function setIndxeYearBox(obj) {
 	reloadYear = obj.value;
+	if (reloadYear == 0) {
+		document.getElementById('TitleBarSelect').style.display = "none";
+	}
+	else {
+		document.getElementById('TitleBarSelect').style.display = "";
+	}
 	PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
 	IndexInit(Api,PostData);
 }
