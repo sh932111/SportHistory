@@ -32,7 +32,7 @@ function setUI() {
 		leftBarInit();
 	});
 	setPageUtil('#pgSelectBar','Page/SelectBar/SelectBar.html');
-	setPageUtil('#TitleBar','PageUtil/TitleBar/TitleBar.html');
+	//setPageUtil('#TitleBar','PageUtil/TitleBar/TitleBar.html');
 	setPageUtilCallBack('#TitleBar','PageUtil/TitleBar/TitleBar.html',function(){
 		document.getElementById('TitleBarSelect').style.display = "none";
 	});
