@@ -70,6 +70,7 @@ function headerSetTitlebar(index){
 	reloadmonth = (getNowMonth()+1);
 	var nav_view = document.getElementById('NavView');
 	var selectbox = document.getElementById('SelectBarBox');
+	document.getElementById('TitleBarSelect').style.display = "none";
 	var nav_array = nav_view.getElementsByTagName("div");
 	var select_array = selectbox.getElementsByTagName("div");
 	var nav_item = nav_array[index];

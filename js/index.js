@@ -33,6 +33,9 @@ function setUI() {
 	});
 	setPageUtil('#pgSelectBar','Page/SelectBar/SelectBar.html');
 	setPageUtil('#TitleBar','PageUtil/TitleBar/TitleBar.html');
+	setPageUtilCallBack('#TitleBar','PageUtil/TitleBar/TitleBar.html',function(){
+		document.getElementById('TitleBarSelect').style.display = "none";
+	});
 	setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 		IndexInit(Api,PostData);
 	});
