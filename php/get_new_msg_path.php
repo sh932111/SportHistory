@@ -54,7 +54,8 @@ if (mysql_select_db('SportData')) {
 				$finish_path = str_replace ("../../","../",$img_path[0]);
 				$data["data_id"] = $data_id;
 				$data["title"] = $title;
-				$data["detail"] = back_space_and_br($detail);
+				$detail_br = str_replace("#"," ",back_space_and_br($detail));
+				$data["detail"] = $detail_br;
 				$data["date"] = $date;
 				$data["time"] = $time;
 				$data["link"] = $t_link;
@@ -77,7 +78,8 @@ if (mysql_select_db('SportData')) {
 				$finish_path = str_replace ("../../","../",$img_path[0]);
 				$data["data_id"] = $data_id;
 				$data["title"] = $title;
-				$data["detail"] = back_space_and_br($detail);
+				$detail_br = str_replace("#"," ",back_space_and_br($detail));
+				$data["detail"] = $detail_br;
 				$data["date"] = $date;
 				$data["time"] = $time;
 				$data["link"] = $t_link;
