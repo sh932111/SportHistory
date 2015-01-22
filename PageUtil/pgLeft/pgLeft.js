@@ -7,7 +7,7 @@ function leftBarInit(){
 
 	var slider_rsc = [];
 	var slider_rsc2 = [];
-	var post_data = "year="+getNowYear()+"&month="+0+"&type="+"學會活動";
+	var post_data = "year="+0+"&month="+0+"&type="+"學會活動";
 	callApi(post_data,getAllNewMsgPathApi,function(user_data){
 		var list = user_data.list;
 		if (list) {

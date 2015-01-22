@@ -14,7 +14,9 @@ function titleBarYearReload() {
 	var options_array = TitleBarSelect.getElementsByTagName('option')[0];
 	options_array.selected = true;
 	var year_text_array = [];
+	year_text_array.push("全部資料");
 	var year_array = [];
+	year_array.push(0);
 	var year = getNowYear();
 
 	var index = year - 2014 + 8;
@@ -59,6 +61,13 @@ function setIndxeBox(obj) {
 
 function setIndxeYearBox(obj) {
 	reloadYear = obj.value;
+	if (reloadYear == 0) {
+		document.getElementById('TitleBarSelect').style.display = "none";
+	}
+	else {
+		document.getElementById('TitleBarSelect').style.display = "";
+	}
 	PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+BarList;
+	//console.log(PostData);
 	IndexInit(Api,PostData);
 }

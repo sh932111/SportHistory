@@ -19,7 +19,7 @@ function init() {
 		}
 	});
 	
-	reloadYear = getNowYear();
+	reloadYear = 0//getNowYear();
 	reloadmonth = 0;//(getNowMonth()+1);
 	Api = getAllNewMsgApi;
 	PostData = "year="+reloadYear+"&month="+reloadmonth+"&type="+"學會活動";
@@ -32,7 +32,10 @@ function setUI() {
 		leftBarInit();
 	});
 	setPageUtil('#pgSelectBar','Page/SelectBar/SelectBar.html');
-	setPageUtil('#TitleBar','PageUtil/TitleBar/TitleBar.html');
+	//setPageUtil('#TitleBar','PageUtil/TitleBar/TitleBar.html');
+	setPageUtilCallBack('#TitleBar','PageUtil/TitleBar/TitleBar.html',function(){
+		document.getElementById('TitleBarSelect').style.display = "none";
+	});
 	setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 		IndexInit(Api,PostData);
 	});
