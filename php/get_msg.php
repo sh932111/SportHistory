@@ -47,7 +47,8 @@ if (mysql_select_db('SportData')) {
 			{
 				$data["data_id"] = $data_id;
 				$data["title"] = $title;
-				$data["detail"] = $detail;
+				$detail_br = str_replace("#"," ",back_space_and_br($detail));
+				$data["detail"] = $detail_br;
 				$data["date"] = $date;
 				$data["time"] = $time;
 				$data["image"] = $image;
@@ -63,7 +64,8 @@ if (mysql_select_db('SportData')) {
 			{
 				$data["data_id"] = $data_id;
 				$data["title"] = $title;
-				$data["detail"] = $detail;
+				$detail_br = str_replace("#"," ",back_space_and_br($detail));
+				$data["detail"] = $detail_br;
 				$data["date"] = $date;
 				$data["time"] = $time;
 				$data["image"] = $image;
