@@ -44,7 +44,7 @@ if (mysql_select_db('SportData')) {
 			{
 				$data["data_id"] = $data_id;
 				$data["title"] = $title;
-				$data["detail"] = $detail;
+				$data["detail"] = back_space_and_br($detail);
 				$data["date"] = $date;
 				$data["time"] = $time;
 				$data["link"] = $t_link;
