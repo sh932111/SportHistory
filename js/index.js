@@ -41,5 +41,7 @@ function setUI() {
 	setPageUtilCallBack('#pgMain','PageUtil/Index/Index.html',function(){
 		IndexInit(Api,PostData);
 	});
-	setPageUtil('#pgFooter','PageUtil/Footer/Footer.html');
+	setPageUtilCallBack('#pgFooter','PageUtil/Footer/Footer.html',function(){
+		footerInit();
+	});
 }
