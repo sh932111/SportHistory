@@ -11,6 +11,7 @@ var getAllPlanApi = "php/get_plan.php";
 var getAllBookApi = "php/get_book.php";
 var getAllLinkApi = "php/get_link.php";
 var getLeafletPath = "../SportServer/php/get_leaflet_path.php";
+var getHeadPath = "../SportServer/php/get_head_path.php";
 var getDataPath = "../SportServer/php/get_data_path.php";
 var getRoot = "php/get_root.php";
 

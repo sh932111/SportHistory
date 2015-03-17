@@ -27,7 +27,9 @@ function init() {
 }
 
 function setUI() {
-	setPageUtil('#pgHeader','PageUtil/Header/Header.html');
+	setPageUtilCallBack('#pgHeader','PageUtil/Header/Header.html',function(){
+		headerInit();
+	});
 	setPageUtilCallBack('#pgLeft','PageUtil/pgLeft/pgLeft.html',function(){
 		leftBarInit();
 	});

@@ -77,3 +77,12 @@ function headerSetTitlebar(index){
 	setTitleBarTitle(nav_array[index].getAttribute('value'),select_array[0].value);
 }
 
+function headerInit(){
+	callApi("",getHeadPath,function(res){
+		if (res.img_path.length > 0) {
+			var get_path = "../SportServer/php/"+res.img_path[0];
+			$("#HeaderImg")[0].src = get_path;
+		}
+	});
+}
+
